@@ -1,6 +1,17 @@
-@media only screen and (min-width: 1450px) {
-  #our-awards::after {
-    display: block;
+@media only screen and (max-width: 1360px) {
+  .left-line,
+  .right-line {
+    width: 10vw;
+    height: 1px;
+    background: black;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .left-line,
+  .right-line {
+    width: 5vw;
+    height: 1px;
+    background: black;
   }
 }
 
