@@ -1,0 +1,377 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+/* Most Common CSS Reset */
+
+.font-marcellus {
+  font-family: "Marcellus SC", serif;
+  text-wrap: balance;
+}
+/* Color Variables */
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --olive-green: #444823;
+  --yellow: #cc723f;
+  --light-yellow: #edecd3;
+  --dark-gray: #1e1e1e;
+}
+body {
+  overflow-x: hidden;
+}
+.bg-pink {
+  background: rgba(237, 236, 211, 0.5);
+}
+.bg-olive-green {
+  background-color: var(--olive-green);
+}
+.bg-light-green {
+  background: rgba(130, 144, 103, 1);
+}
+.bg-light-yellow {
+  background-color: var(--light-yellow);
+}
+
+/* Color Variable Classes */
+.olive-green {
+  color: var(--olive-green);
+}
+.dark-gray {
+  color: var(--dark-gray);
+}
+
+/* Custom font classes */
+.heading1 {
+  font-size: clamp(20px, 5vw, 64px);
+}
+
+.heading2 {
+  font-size: clamp(22px, 3vw, 36px);
+  font-weight: 400;
+  line-height: 45.14px;
+  text-align: left;
+}
+
+.heading3 {
+  font-size: calc(14px, 2vw, 19px);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  color: var(--olive-green);
+}
+.heading4 {
+  font-size: calc(14px, 2vw, 19px);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+  color: var(--dark-gray);
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Home Page */
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+nav .navbar-brand img {
+  max-width: 90px;
+  min-height: 90px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.36px;
+  text-align: left;
+  color: var(--black);
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--yellow);
+}
+
+.nav-button {
+  border: 1px solid var(--olive-green);
+  color: #444823;
+}
+
+.nav-button:hover {
+  border: 1px solid var(--olive-green);
+  color: var(--white);
+  background: var(--olive-green);
+}
+
+/* Custom Hamburger Icon */
+
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  height: 3em;
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: var(--olive-green);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+/* Hero section */
+
+.hero-section h2 {
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: left;
+}
+.carousel-indicators {
+  gap: 10px;
+}
+.carousel-indicators [data-bs-target] {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+/* What we do */
+.what-we-do {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.what-we-do h2 {
+  font-size: clamp(20px, 3vw, 32px);
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: left;
+}
+#our-awards::after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background: var(--black);
+  position: absolute;
+  top: 50%;
+  left: -60px;
+  transform: translateY(-50%);
+  display: none;
+}
+
+/* Play Video */
+.play-video {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  border: 1px solid var(--white);
+  cursor: pointer;
+}
+.close {
+  width: 30px;
+  height: 30px;
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+}
+.close img {
+  cursor: pointer;
+}
+
+/* EXPLORE OUR CATEGORIES */
+.card {
+  min-height: 300px;
+  border: 1px solid #cc723f;
+  border-radius: 0px !important;
+}
+.card-light-yellow {
+  background: #edecd3;
+}
+.card h3 {
+  font-size: clamp(20px, 3vw, 32px);
+  font-weight: 400;
+  line-height: 1.25;
+}
+/* Footer */
+.footer-part1 {
+  background-image: url("../images/footer-bg-removebg-preview.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+footer .footer-part1 {
+  min-height: 230px;
+}
+footer ul li {
+  list-style: circle;
+}
+footer .footer-part2 {
+  border-left: 1px solid rgba(30, 30, 30, 0.5);
+  border-right: 1px solid rgba(30, 30, 30, 0.5);
+}
+footer .squre-icon {
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(68, 72, 35, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+footer .squre-icon i {
+  font-size: 20px;
+  color: var(--olive-green);
+}
+footer .squre-icon:hover {
+  background: var(--olive-green);
+}
+footer .squre-icon:hover i {
+  color: var(--white);
+}
+
+/* about css */
+
+/* hero section */
+.hero-section-about {
+  height: 300px;
+  background-image: url("../images/bg-about.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.about-video-area {
+  height: 600px;
+  background: linear-gradient(
+    to bottom,
+    rgba(237, 236, 211, 0.5) 50%,
+    #ffffff 50%
+  );
+}
+
+/* join-this-jurney */
+.button-join {
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+.object-fit {
+  object-fit: cover;
+}
+
+/* cresoul css */
+.owl-carousel .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.owl-carousel .item img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.cerosoul-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.cerosoul-btn .btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Adjust color as needed */
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  position: relative;
+}
+
+.cerosoul-btn .btn.owl-prev::before {
+  content: "←"; /* Left arrow */
+  font-size: 20px;
+}
+.cerosoul-btn .btn:hover {
+  background: var(--light-yellow);
+}
+
+.cerosoul-btn .btn.owl-next::before {
+  content: "→"; /* Right arrow */
+  font-size: 20px;
+}
+
+.cerosoul-btn .btn.owl-prev {
+  border: 1px solid var(--black);
+}
+
+.cerosoul-btn .btn.owl-next {
+  border: 1px solid var(--black);
+}

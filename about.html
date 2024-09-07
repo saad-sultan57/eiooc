@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EIOOC</title>
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light px-3 px-md-5 pt-3">
+      <div class="container-fluid p-0">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/logo.png" alt="Site-Logo" />
+        </a>
+        <!-- Custom Hamburger Icon -->
+        <label class="hamburger d-block d-lg-none" for="menuToggle">
+          <input id="menuToggle" type="checkbox" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" />
+          <svg viewBox="0 0 32 32">
+            <path class="line line-top-bottom"
+              d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+            </path>
+            <path class="line" d="M7 16 27 16"></path>
+          </svg>
+        </label>
+
+        <!-- Collapsible Menu -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav position-relative mx-auto gap-4 mt-4 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Judges</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Winners</a>
+            </li>
+          </ul>
+
+          <!-- Button inside the collapse (only visible on small screens) -->
+          <button class="btn nav-button d-lg-none mt-3 w-100">
+            PARTICIPATE NOW
+          </button>
+        </div>
+
+        <!-- Button outside the collapse (only visible on large screens) -->
+        <button class="btn nav-button d-none d-lg-block">
+          PARTICIPATE NOW
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="px-3 px-md-5 hero-section-about d-flex justify-content-center align-items-center">
+      <h1 class="font-marcellus text-center heading1 text-white">About</h1>
+
+    </div>
+
+    <!-- What we do -->
+
+    <div class="what-we-do p-5 mt-5">
+      <div class="row gx-0 gx-lg-3">
+        <div class="col-lg-7">
+          <div>
+            <h2 class="font-marcellus olive-green heading2">
+              The European International Olive Oil Competition (EIOOC) is a groundbreaking initiative, envisioned by
+              Biotech & Process Engineer R. Chouket, to celebrate and elevate the art of olive oil production across
+              Europe.
+            </h2>
+            <div class="mt-5">
+              <img src="assets/images/leaves.png" alt="leaves" class="w-100" />
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 ps-lg-5">
+          <div>
+            <h3 class="mt-4 mt-lg-0 olive-green heading2 font-marcellus">What we Do</h3>
+            <p class="pb-5 heading3">
+              To establish EIOOC as a prestigious and dynamic event, we have
+              chosen Geneva as our base city. Geneva, renowned for hosting
+              world-class events and being a hub of international diplomacy,
+              perfectly aligns with the esteemed nature of our competition.
+              However, in keeping with the spirit of innovation and
+              inclusivity, we have the option to move the competition to any
+              other major European city for one year before returning to
+              Geneva, ensuring that the event remains vibrant and diverse.
+            </p>
+            <p class="heading3">
+              As a competition that geographically spans the entire continent
+              of Europe, the EIOOC distinguishes itself by its unparalleled
+              preparation, distinctive format, and rich traditions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-pink px-5 py-4">
+      <div class="what-we-do ">
+        <div class="row  gx-4">
+          <div class="col-md-6 col-lg-4">
+            <div>
+              <h2 class="heading1 font-marcellus olive-green">We love what we do,how we do it, and the people involved”
+              </h2>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-8">
+            <div>
+              <p class="heading3 olive-green">
+                Our mission is to provide a prestigious platform for producers to showcase their finest products,
+                inspire innovation, and drive excellence within the industry. To achieve this, we are exploring
+                collaborations with several world-renowned organizations, further enhancing the global stature of the
+                EIOOC.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-video-area overflow-hidden">
+      <!-- Image Area -->
+      <div class="position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-8 my-5">
+            <img src="assets/images/about-video.png" alt="" class="w-100" />
+
+          </div>
+        </div>
+
+        <div class="play-video" data-bs-toggle="modal" data-bs-target="#myModal">
+          <img src="assets/images/play.svg" alt="playSvg" />
+        </div>
+      </div>
+    </div>
+
+    <!-- join this exciting jurney -->
+    <div class="container-fluid px-0">
+      <div class="row join-jurney mt-5 g-0">
+        <div class="col-md-6 order-2 order-md-1">
+          <img src="assets/images/about-join.png" alt="" srcset="" class="w-100 h-100 object-fit">
+
+        </div>
+        <div
+          class="col-md-6 order-1 order-md-2 bg-light-green d-flex justify-content-center  flex-column py-5 p-4 p-lg-5">
+          <div class=" d-flex justify-content-center align-items-center flex-column p-3 p-lg-5">
+            <h2 class="font-marcellus text-white fs-3">
+              Join us in this exciting journey as we celebrate the finest in European olive oil, with Geneva as our
+              enduring base and the option to explore the richness of Europe's vibrant cities.
+            </h2>
+            <p class="text-white heading4 py-4 text-start">
+              Geneva will serve as the heart of the European IOOC, fostering continuity and establishing a legacy of
+              excellence. The option to explore other European cities allows us to bring the competition closer to olive
+              oil producers across the continent, ensuring that EIOOC remains at the forefront of the international
+              olive oil industry.
+            </p>
+          </div>
+          <div class="d-flex justify-content-start px-3  px-md-5">
+            <button class="btn  button-join  mt-3 p-3">
+              TERMS & CONDITIONS
+            </button>
+          </div>
+
+
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Foooter -->
+    <footer class="container-fluid bg-light-yellow p-4">
+      <div class="container">
+        <div class="row pt-5 pb-4">
+          <div class=" col-md-6 col-lg-3">
+            <div class="footer-part1">
+
+
+              <h3 class="heading2 font-marcellus olive-green mb-2">Get In Touch</h3>
+              <div class="d-flex flex-column gap-2">
+                <div class="d-flex align-items-center justify-content-start gap-3">
+                  <i class="fa-solid fa-envelope"></i>
+                  <p class="mb-0 heading4">info@eiooc.com</p>
+                </div>
+                <div class="d-flex  align-items-center justify-content-start gap-3">
+                  <i class="fa-solid fa-phone"></i>
+                  <p class="mb-0 heading4">0046737788247</p>
+                </div>
+                <div class="d-flex align-items-center justify-content-start gap-3">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <p class="mb-0 heading4">Contact Us</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="footer-part2 px-0 px-md-5">
+              <h3 class="heading2 font-marcellus olive-green mb-2">Site Map</h3>
+              <ul>
+                <li>
+                  <a href="#" class="heading4">Home</a>
+                </li>
+                <li>
+                  <a href="#" class="heading4">About Us</a>
+                </li>
+                <li>
+                  <a href="#" class="heading4">JUDGES</a>
+                </li>
+                <li>
+                  <a href="#" class="heading4">Gallery</a>
+                </li>
+                <li>
+                  <a href="#" class="heading4">Winners</a>
+                </li>
+                <li>
+                  <a href="#" class="heading4">Terms & Conditions</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-3">
+            <div class="footer-part3">
+              <h3 class="heading2 font-marcellus olive-green mb-2">Our Socials</h3>
+              <p>Join Our Social Media for Updates</p>
+              <div class="d-flex gap-3">
+                <div class="squre-icon">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="squre-icon">
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="squre-icon">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <div class="squre-icon">
+                  <i class="fa-brands fa-twitter"></i>
+                </div>
+
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  </footer>
+
+  </div>
+
+  <!-- Video Model -->
+
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="close" data-bs-dismiss="modal">
+          <img src="assets/images/cross.svg" alt="cross" class="pointer" />
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <iframe class="w-100" height="300" src="https://www.youtube.com/embed/QNS09DQe0_w?si=luYJvDVNowm7fX6f"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Javascript Files -->
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
