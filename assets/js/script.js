@@ -18,9 +18,9 @@ $(document).ready(function () {
 });
 
 const images = {
-  healthy: ["assets/images/award1.png", "assets/images/healthy2.png"],
-  quality: ["assets/images/award2.png", "assets/images/quality2.png"],
-  infused: ["assets/images/award1.png", "assets/images/infused2.png"],
+  healthy: ["assets/images/award1.png", "assets/images/award1.png"],
+  quality: ["assets/images/award2.png", "assets/images/award2.png"],
+  infused: ["assets/images/award1.png", "assets/images/award2.png"],
 };
 
 function loadImages(category, btn) {
