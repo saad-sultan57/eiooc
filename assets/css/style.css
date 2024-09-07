@@ -246,9 +246,10 @@ nav .navbar-brand img {
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: -12px;
-  top: -12px;
+  right: -19px;
+  top: -26px;
   font-size: 35px;
+  color: red;
 }
 .close img {
   cursor: pointer;
