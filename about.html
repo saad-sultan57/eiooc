@@ -35,6 +35,7 @@
 
         <!-- Collapsible Menu -->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <div class="left-line"></div>
           <ul class="navbar-nav position-relative mx-auto gap-4 mt-4 mt-lg-0">
             <li class="nav-item">
               <a class="nav-link active" href="index.html">Home</a>
@@ -55,15 +56,16 @@
               <a class="nav-link" href="#">Winners</a>
             </li>
           </ul>
+          <div class="right-line me-3 "></div>
 
           <!-- Button inside the collapse (only visible on small screens) -->
-          <button class="btn nav-button fs-13 d-lg-none mt-3 w-100">
+          <button class="btn nav-button d-lg-none mt-3 w-100">
             PARTICIPATE NOW
           </button>
         </div>
 
         <!-- Button outside the collapse (only visible on large screens) -->
-        <button class="btn nav-button d-none d-lg-block">
+        <button class="btn nav-button d-none d-lg-block fs-13">
           PARTICIPATE NOW
         </button>
       </div>
@@ -277,33 +279,34 @@
         </div>
       </div>
 
-  </div>
+    </footer>
+    <!-- Video Model -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <i class="fa-solid fa-circle-xmark close z1" data-bs-dismiss="modal"></i>
 
-  </footer>
-
-  </div>
-
-  <!-- Video Model -->
-
-  <!-- The Modal -->
-  <div class="modal fade" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <!-- Modal Header -->
-        <div class="close" data-bs-dismiss="modal">
-          <img src="assets/images/cross.svg" alt="cross" class="pointer" />
-        </div>
-
-        <!-- Modal body -->
-        <div class="modal-body">
-          <iframe class="w-100" height="300" src="https://www.youtube.com/embed/QNS09DQe0_w?si=luYJvDVNowm7fX6f"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <!-- Modal body -->
+          <div class="modal-body p-2">
+            <iframe id="myVideo" class="w-100" height="300"
+              src="https://www.youtube.com/embed/QNS09DQe0_w?autoplay=1&mute=1&si=luYJvDVNowm7fX6f"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>
+    <!-- Term and Condition -->
+    <div class="term_and_condition">
+      <a href="terms-and-conditions.html" class="font-marcellus" aria-label="Terms and Conditions">Terms &
+        Conditions</a>
+    </div>
   </div>
+
+
+
   <!-- Javascript Files -->
   <script src="assets/js/bootstrap.min.js"></script>
 

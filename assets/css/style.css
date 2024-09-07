@@ -95,6 +95,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
+button:focus {
+  box-shadow: none !important;
+}
 .z1 {
   z-index: 111;
 }
@@ -330,6 +333,10 @@ footer .squre-icon:hover i {
 .button-join {
   border: 1px solid var(--white);
   color: var(--white);
+  border-radius: 0px;
+}
+.button-join:hover {
+  background: var(--white);
 }
 .object-fit {
   object-fit: cover;
@@ -389,4 +396,26 @@ footer .squre-icon:hover i {
 
 .cerosoul-btn .btn.owl-next {
   border: 1px solid var(--black);
+}
+
+/* Term and condition fix button */
+.term_and_condition {
+  position: fixed;
+  top: 30%; /* Move to the bottom */
+  right: 0;
+  background: var(--light-yellow);
+  padding: 10px 0;
+  width: 55px;
+  height: 245px;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.term_and_condition a {
+  writing-mode: tb;
+  font-size: 20px;
+  transform: rotate(180deg);
 }
