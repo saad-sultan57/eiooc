@@ -22,7 +22,7 @@
     <!-- NavBar -->
     <nav class="navbar navbar-expand-lg navbar-light px-3 px-md-5 pt-3">
       <div class="container-fluid p-0">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <img src="assets/images/logo.png" alt="Site-Logo" />
         </a>
         <!-- Custom Hamburger Icon -->
@@ -222,19 +222,18 @@
     </div>
 
     <!-- our Awards -->
-    <div class="container-fluid ">
+    <!-- Our Awards -->
+    <div class="container-fluid">
       <div class="container py-5">
         <div class="row">
           <div class="col-lg-8">
-            <div class=" d-flex justify-content-between align-items-center mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
               <div class="awards position-relative">
                 <h2 class="heading2 font-marcellus olive-green pb-0" id="our-awards">OUR AWARDS</h2>
               </div>
               <div class="cerosoul-btn d-flex justify-content-center align-items-center">
                 <button class="btn owl-prev" aria-label="Previous Slide"></button>
                 <button class="btn owl-next" aria-label="Next Slide"></button>
-
-
               </div>
             </div>
           </div>
@@ -242,33 +241,21 @@
 
         <div class="row">
           <div class="col-lg-8 bg-pink py-5 px-5">
-            <div class="owl-carousel">
-              <div class="item">
-                <img src="assets/images/award1.png" alt="Award 1" class="w-75">
-              </div>
-              <div class="item">
-                <img src="assets/images/award2.png" alt="Award 2" class="w-75">
-              </div>
+            <div class="owl-carousel" id="awards-carousel">
+              <!-- Initial images will be loaded here by JS -->
             </div>
           </div>
-          <div class="col-lg-4 d-flex justify-content-center align-items-center flex-column ">
-            <button class="btn nav-button  mt-3 w-50 py-3 bg-olive-green text-white ">
-              HEALTHY
-            </button>
-            <button class="btn nav-button  mt-3 w-50 py-3">
-              QUALITY
-            </button>
-            <button class="btn nav-button  mt-3 w-50 py-3">
-              INFUSED
-            </button>
-
-
+          <div class="col-lg-4 d-flex justify-content-center align-items-center flex-column">
+            <button class="btn nav-button mt-3 w-50 py-3 bg-olive-green text-white"
+              onclick="loadImages('healthy', this)">HEALTHY</button>
+            <button class="btn nav-button mt-3 w-50 py-3" onclick="loadImages('quality', this)">QUALITY</button>
+            <button class="btn nav-button mt-3 w-50 py-3" onclick="loadImages('infused', this)">INFUSED</button>
           </div>
+
         </div>
-
       </div>
-
     </div>
+
 
   </div>
   <!-- Foooter -->
@@ -359,16 +346,17 @@
 
   <!-- The Modal -->
   <div class="modal fade" id="myModal">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <!-- Modal Header -->
         <div class="close" data-bs-dismiss="modal">
-          <img src="assets/images/cross.svg" alt="cross" class="pointer" />
+          <img src="assets/images/cross.svg" alt="cross" class="pointer" data-bs-dismiss="modal" />
         </div>
 
         <!-- Modal body -->
         <div class="modal-body">
-          <iframe class="w-100" height="300" src="https://www.youtube.com/embed/QNS09DQe0_w?si=luYJvDVNowm7fX6f"
+          <iframe id="myVideo" class="w-100" height="300"
+            src="https://www.youtube.com/embed/QNS09DQe0_w?autoplay=1&mute=1&si=luYJvDVNowm7fX6f"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -376,6 +364,9 @@
       </div>
     </div>
   </div>
+
+
+
   <!-- Javascript Files -->
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -18,9 +18,7 @@
   --light-yellow: #edecd3;
   --dark-gray: #1e1e1e;
 }
-body {
-  overflow-x: hidden;
-}
+
 .bg-pink {
   background: rgba(237, 236, 211, 0.5);
 }
@@ -76,6 +74,7 @@ body {
   height: 100%;
   font-family: "Inter", sans-serif;
   background-color: #ffffff;
+  overflow-x: hidden;
 }
 
 img,
@@ -110,6 +109,7 @@ nav .navbar-brand img {
   line-height: 19.36px;
   text-align: left;
   color: var(--black);
+  text-transform: uppercase;
 }
 
 .navbar-light .navbar-nav .nav-link.active {
@@ -119,12 +119,31 @@ nav .navbar-brand img {
 .nav-button {
   border: 1px solid var(--olive-green);
   color: #444823;
+  border-radius: 0px !important;
+  height: 60px !important;
 }
 
 .nav-button:hover {
   border: 1px solid var(--olive-green);
   color: var(--white);
   background: var(--olive-green);
+}
+
+.navbar-light .navbar-nav::before,
+.navbar-light .navbar-nav::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 17vw; /* Default line length */
+  height: 1px; /* Line thickness */
+  background-color: black; /* Line color */
+}
+.navbar-light .navbar-nav::before {
+  left: -19vw; /* Adjust to position the line on the left */
+}
+
+.navbar-light .navbar-nav::after {
+  right: -270px; /* Adjust to position the line on the right */
 }
 
 /* Custom Hamburger Icon */
@@ -246,6 +265,9 @@ nav .navbar-brand img {
   border: 1px solid #cc723f;
   border-radius: 0px !important;
 }
+.card:first-child {
+  border-right: 0px;
+}
 .card-light-yellow {
   background: #edecd3;
 }
@@ -270,6 +292,7 @@ footer ul li {
 footer .footer-part2 {
   border-left: 1px solid rgba(30, 30, 30, 0.5);
   border-right: 1px solid rgba(30, 30, 30, 0.5);
+  text-transform: uppercase;
 }
 footer .squre-icon {
   width: 45px;

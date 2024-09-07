@@ -1,23 +1,12 @@
 @media only screen and (min-width: 1450px) {
-  .navbar-light .navbar-nav::before,
-  .navbar-light .navbar-nav::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 250px; /* Default line length */
-    height: 1px; /* Line thickness */
-    background-color: black; /* Line color */
-  }
   #our-awards::after {
     display: block;
   }
+}
 
-  .navbar-light .navbar-nav::before {
-    left: -270px; /* Adjust to position the line on the left */
-  }
-
-  .navbar-light .navbar-nav::after {
-    right: -270px; /* Adjust to position the line on the right */
+@media only screen and (max-width: 991px) {
+  .card:first-child {
+    border: 1px solid #cc723f;
   }
 }
 @media only screen and (max-width: 767px) {
