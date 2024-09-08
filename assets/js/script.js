@@ -3,10 +3,11 @@ $(document).ready(function () {
     loop: true,
     margin: 10,
     nav: false,
-    responsive: { 0: { items: 1 }, 500: { items: 1 }, 1000: { items: 2 } },
+    responsive: { 0: { items: 2 }, 500: { items: 2 }, 1000: { items: 2 } },
     autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
+    slideBy: 2,
   });
 
   $(".owl-prev").click(() => owl.trigger("prev.owl.carousel"));
@@ -17,9 +18,39 @@ $(document).ready(function () {
 });
 
 const images = {
-  healthy: ["assets/images/award1.png", "assets/images/award1.png"],
-  quality: ["assets/images/award2.png", "assets/images/award2.png"],
-  infused: ["assets/images/award1.png", "assets/images/award2.png"],
+  healthy: [
+    "assets/images/EIOOC Awards PNG/EIOOC_Gold Award_Healthy-pdf.png",
+    "assets/images/EIOOC Awards PNG/EIOOC_Silver Award_Healthy-pdf.png",
+    "assets/images/AAIOOC Awards PNG/AAIOOC_Gold Award_Healthy-pdf.png",
+    "assets/images/AAIOOC Awards PNG/AAIOOC_Silver Award_Healthy-pdf.png",
+    "assets/images/SIOOC Awards PNG/SIOOC_Gold Award_Healthy.png",
+    "assets/images/SIOOC Awards PNG/SIOOC_silver Award_Healthy.png",
+    "assets/images/USIOOC Awards PNG/USIOOC awards-2023_Gold_Healthy.png",
+    "assets/images/USIOOC Awards PNG/USIOOC awards-2023_Silver_Healthy-pdf.png",
+  ],
+  quality: [
+    "assets/images/AAIOOC Awards PNG/AAIOOC_Silver Award_Quality-pdf.png",
+    "assets/images/AAIOOC Awards PNG/AAIOOC_Silver Award_Quality-pdf.png",
+    "assets/images/EIOOC Awards PNG/EIOOC_Silver Award_Quality-pdf.png",
+    "assets/images/EIOOC Awards PNG/EIOOC_Gold Award_Quality-pdf.png",
+    "assets/images/SIOOC Awards PNG/SIOOC_Gold Award_Quality.png",
+    "assets/images/SIOOC Awards PNG/SIOOC_Silver Award_Quality.png",
+    "assets/images/USIOOC Awards PNG/USIOOC awards-2023_Gold_Quality.png",
+    "assets/images/USIOOC Awards PNG/USIOOC awards-2023_Silver_Quality-pdf.png",
+     
+
+
+  ],
+  infused: [
+    "assets/images/AAIOOC Awards PNG/AAIOOC_Silver Award_Infused-pdf.png",
+    "assets/images/AAIOOC Awards PNG/AAIOOC_Gold Award_Infused-pdf.png",
+    "assets/images/EIOOC Awards PNG/EIOOC_Silver Award_Infused-pdf.png",
+    "assets/images/EIOOC Awards PNG/EIOOC_Gold Award_Infused-pdf.png",
+    "assets/images/SIOOC Awards PNG/SIOOC_Gold Award_Infused.png",
+    "assets/images/SIOOC Awards PNG/SIOOC_Silver Award_Infused.png",
+    "assets/images/USIOOC Awards PNG/USIOOC awards-2023_Gold_Infused.png",
+    "assets/images/USIOOC Awards PNG/USIOOC awards-2023_Silver_Infused-pdf.png",
+  ],
 };
 
 function loadImages(category, btn) {
@@ -28,7 +59,7 @@ function loadImages(category, btn) {
     .empty()
     .append(
       images[category].map(
-        (src) => `<div class="item"><img src="${src}" class="w-75"></div>`
+        (src) => `<div class="item d-flex justify-content-center align-ite"><img src="${src}" class="w-75"></div>`
       )
     );
 
@@ -38,10 +69,11 @@ function loadImages(category, btn) {
       loop: true,
       margin: 10,
       nav: false,
-      responsive: { 0: { items: 1 }, 500: { items: 1 }, 1000: { items: 2 } },
+      responsive: { 0: { items: 2 }, 500: { items: 2 }, 1000: { items: 2 } },
       autoplay: true,
       autoplayTimeout: 3000,
       autoplayHoverPause: true,
+      slideBy: 2,
     });
 
   // Remove active class from all buttons and add it to the clicked button

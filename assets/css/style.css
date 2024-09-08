@@ -42,7 +42,7 @@
 .fs-13 {
   font-size: 13px;
 }
-.fs-96{
+.fs-96 {
   font-size: clamp(45px, 8vw, 96px);
 }
 
@@ -249,8 +249,8 @@ nav .navbar-brand img {
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: -19px;
-  top: -26px;
+  right: -9px;
+  top: -41px;
   font-size: 35px;
   color: red;
 }
