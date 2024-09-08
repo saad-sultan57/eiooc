@@ -42,6 +42,9 @@
 .fs-13 {
   font-size: 13px;
 }
+.fs-96{
+  font-size: clamp(45px, 8vw, 96px);
+}
 
 /* Custom font classes */
 .heading1 {
