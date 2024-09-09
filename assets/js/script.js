@@ -1,85 +1,51 @@
 $(document).ready(function () {
-  const owl = $(".owl-carousel").owlCarousel({
+  // Initialize carousels
+  const carousels = $(".owl-carousel").owlCarousel({
     loop: true,
     margin: 10,
     nav: false,
-    responsive: { 0: { items: 2 }, 500: { items: 2 }, 1000: { items: 2 } },
+    responsive: { 0: { items: 1 }, 500: { items: 1 }, 1000: { items: 1 } },
     autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
-    slideBy: 2,
   });
 
-  $(".owl-prev").click(() => owl.trigger("prev.owl.carousel"));
-  $(".owl-next").click(() => owl.trigger("next.owl.carousel"));
+  // Set up tab click events
+  $(".nav-button").click(function() {
+    const category = $(this).data("category");
+    showCarousel(category);
+    updateActiveTab(this);
+  });
 
   // Load 'healthy' images by default
-  loadImages("healthy", $(".nav-button").first()[0]);
+  showCarousel("healthy");
+  updateActiveTab($(".nav-button[data-category='healthy']")[0]);
+
+  function showCarousel(category) {
+    $(".owl-carousel").hide();
+    $(`#${category}-carousel`).show();
+    carousels.trigger('refresh.owl.carousel');
+  }
+
+  function updateActiveTab(button) {
+    $(".nav-button").removeClass("bg-olive-green text-white");
+    $(button).addClass("bg-olive-green text-white");
+  }
+
+  $(".owl-prev").click(function() {
+    const visibleCarousel = $(".owl-carousel:visible");
+    visibleCarousel.trigger("prev.owl.carousel");
+  });
+
+  $(".owl-next").click(function() {
+    const visibleCarousel = $(".owl-carousel:visible");
+    visibleCarousel.trigger("next.owl.carousel");
+  });
+
+
+  
 });
 
-const images = {
-  healthy: [
-    "assets/images/EIOOC Awards PNG/EIOOC_Gold Award_Healthy-pdf.png",
-    "assets/images/EIOOC Awards PNG/EIOOC_Silver Award_Healthy-pdf.png",
-    "assets/images/AAIOOC Awards PNG/AAIOOC_Gold Award_Healthy-pdf.png",
-    "assets/images/AAIOOC Awards PNG/AAIOOC_Silver Award_Healthy-pdf.png",
-    "assets/images/SIOOC Awards PNG/SIOOC_Gold Award_Healthy.png",
-    "assets/images/SIOOC Awards PNG/SIOOC_silver Award_Healthy.png",
-    "assets/images/USIOOC Awards PNG/USIOOC awards-2023_Gold_Healthy.png",
-    "assets/images/USIOOC Awards PNG/USIOOC awards-2023_Silver_Healthy-pdf.png",
-  ],
-  quality: [
-    "assets/images/AAIOOC Awards PNG/AAIOOC_Silver Award_Quality-pdf.png",
-    "assets/images/AAIOOC Awards PNG/AAIOOC_Silver Award_Quality-pdf.png",
-    "assets/images/EIOOC Awards PNG/EIOOC_Silver Award_Quality-pdf.png",
-    "assets/images/EIOOC Awards PNG/EIOOC_Gold Award_Quality-pdf.png",
-    "assets/images/SIOOC Awards PNG/SIOOC_Gold Award_Quality.png",
-    "assets/images/SIOOC Awards PNG/SIOOC_Silver Award_Quality.png",
-    "assets/images/USIOOC Awards PNG/USIOOC awards-2023_Gold_Quality.png",
-    "assets/images/USIOOC Awards PNG/USIOOC awards-2023_Silver_Quality-pdf.png",
-     
-
-
-  ],
-  infused: [
-    "assets/images/AAIOOC Awards PNG/AAIOOC_Silver Award_Infused-pdf.png",
-    "assets/images/AAIOOC Awards PNG/AAIOOC_Gold Award_Infused-pdf.png",
-    "assets/images/EIOOC Awards PNG/EIOOC_Silver Award_Infused-pdf.png",
-    "assets/images/EIOOC Awards PNG/EIOOC_Gold Award_Infused-pdf.png",
-    "assets/images/SIOOC Awards PNG/SIOOC_Gold Award_Infused.png",
-    "assets/images/SIOOC Awards PNG/SIOOC_Silver Award_Infused.png",
-    "assets/images/USIOOC Awards PNG/USIOOC awards-2023_Gold_Infused.png",
-    "assets/images/USIOOC Awards PNG/USIOOC awards-2023_Silver_Infused-pdf.png",
-  ],
-};
-
-function loadImages(category, btn) {
-  // Update carousel images
-  $("#awards-carousel")
-    .empty()
-    .append(
-      images[category].map(
-        (src) => `<div class="item d-flex justify-content-center align-ite"><img src="${src}" class="w-75"></div>`
-      )
-    );
-
-  $(".owl-carousel")
-    .owlCarousel("destroy")
-    .owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: false,
-      responsive: { 0: { items: 2 }, 500: { items: 2 }, 1000: { items: 2 } },
-      autoplay: true,
-      autoplayTimeout: 3000,
-      autoplayHoverPause: true,
-      slideBy: 2,
-    });
-
-  // Remove active class from all buttons and add it to the clicked button
-  $(".nav-button").removeClass("bg-olive-green text-white");
-  $(btn).addClass("bg-olive-green text-white");
-}
 // Load the YouTube API
 var tag = document.createElement("script");
 tag.src = "https://www.youtube.com/iframe_api";

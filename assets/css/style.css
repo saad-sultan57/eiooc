@@ -221,7 +221,7 @@ nav .navbar-brand img {
   background: var(--black);
   position: absolute;
   top: 50%;
-  left: -15px;
+  left: -11px;
   transform: translateY(-50%);
 }
 
@@ -249,7 +249,7 @@ nav .navbar-brand img {
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: -9px;
+  right: 0px;
   top: -41px;
   font-size: 35px;
   color: red;
@@ -382,7 +382,7 @@ footer .squre-icon:hover i {
 }
 
 .cerosoul-btn .btn.owl-prev::before {
-  content: "←"; /* Left arrow */
+  content: ""; /* Left arrow */
   font-size: 20px;
 }
 .cerosoul-btn .btn:hover {
@@ -390,7 +390,7 @@ footer .squre-icon:hover i {
 }
 
 .cerosoul-btn .btn.owl-next::before {
-  content: "→"; /* Right arrow */
+  content: ""; /* Right arrow */
   font-size: 20px;
 }
 
