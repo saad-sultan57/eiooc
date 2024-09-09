@@ -42,7 +42,9 @@ $(document).ready(function () {
     visibleCarousel.trigger("next.owl.carousel");
   });
 
-
+  $(window).scroll(function() {
+    alert("scroll");
+  });
   
 });
 
@@ -94,7 +96,7 @@ function stopVideo() {
     isMuted = true;
     document.getElementById("muteToggle").innerHTML =
       '<i class="fas fa-microphone-slash"></i>';
-  }
+      }
 }
 
 // Add event listener to stop video when modal is hidden
